@@ -1,5 +1,7 @@
 # Prueba Técnica BackEnd
 
-Prueba Técnica BackEnd
-
-Favor de leer los pasos a seguir en el archivo Instrucciones.md
+## Información
+- Nombre: Adrian Job Hernández Ibarra
+- Cohorte: 61
+- Fecha: 14 de Enero de 2026
+- Hora: 12:44
