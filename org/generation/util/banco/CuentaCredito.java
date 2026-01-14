@@ -45,6 +45,10 @@ public class CuentaCredito extends Cuenta implements Imprimible{
 		return saldo;
 	}//getSaldo
 	
+	public double getSaldoSinComision() {
+		return saldo;
+	}//getSaldoSinComision
+	
 	@Override
 	public double retiro(double cantidad) {
 		if (cantidad <= 0) {

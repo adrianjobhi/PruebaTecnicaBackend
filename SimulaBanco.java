@@ -1,7 +1,7 @@
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 
+import org.generation.util.Banco;
 import org.generation.util.ReciboSaldo;
 import org.generation.util.banco.Cuenta;
 import org.generation.util.banco.CuentaCredito;
@@ -22,6 +22,8 @@ public class SimulaBanco {
 		
 		TarjetaRegalo tarjetaRegalo = new TarjetaRegalo(1005, 5000, "Job Hernandez");
 		
+		Banco banco = new Banco();
+		
 		System.out.println(cuentas.get(1001));
 		System.out.println(cuentas.get(1002));
 		System.out.println(cuentas.get(1003));
@@ -40,6 +42,18 @@ public class SimulaBanco {
 	    ReciboSaldo.Imprimir(cuentas.get(1004));
 	    
 	    ReciboSaldo.Imprimir(tarjetaRegalo);
+	    
+	    banco.agregarCuenta(cuentas.get(1001));
+	    banco.agregarCuenta(cuentas.get(1002));
+	    banco.agregarCuenta(cuentas.get(1003));
+	    banco.agregarCuenta(cuentas.get(1004));
+	    banco.agregarCuenta(tarjetaRegalo);
+	    
+	    banco.accederCuenta(1006);
+	    
+	    banco.cancelarCuenta(1001);
+	    
+		banco.reporte();
 		
 	}//main
 }//class Banco
