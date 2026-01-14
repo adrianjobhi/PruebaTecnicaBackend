@@ -5,9 +5,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
-import org.generation.util.Imprimible;
+//import org.generation.util.Imprimible;
 
-public abstract class Cuenta implements Imprimible{
+public abstract class Cuenta /*implements Imprimible*/{
 	//Los números de cuenta del banco iniciarán después de 1000
 	private static int consecutivo=1000; 
 	protected double saldo;
