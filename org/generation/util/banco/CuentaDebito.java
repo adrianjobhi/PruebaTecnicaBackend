@@ -2,7 +2,9 @@ package org.generation.util.banco;
 
 import java.util.Date;
 
-public class CuentaDebito extends Cuenta {
+import org.generation.util.Imprimible;
+
+public class CuentaDebito extends Cuenta implements Imprimible{
 	private double montoMinimo;
 
 	public CuentaDebito(double saldo, String numeroCliente, Date fechaApertura, double montoMinimo, String nombreCliente) {

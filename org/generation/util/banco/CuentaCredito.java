@@ -2,7 +2,9 @@ package org.generation.util.banco;
 
 import java.util.Date;
 
-public class CuentaCredito extends Cuenta {
+import org.generation.util.Imprimible;
+
+public class CuentaCredito extends Cuenta implements Imprimible{
 	private double limite;
 	private float tasa;
 	private Date fechaCorte;

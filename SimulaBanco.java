@@ -6,6 +6,7 @@ import org.generation.util.ReciboSaldo;
 import org.generation.util.banco.Cuenta;
 import org.generation.util.banco.CuentaCredito;
 import org.generation.util.banco.CuentaDebito;
+import org.generation.util.extras.TarjetaRegalo;
 
 public class SimulaBanco {
 	public static void main(String[] args) {
@@ -19,10 +20,14 @@ public class SimulaBanco {
 		cuentas.put(1003, new CuentaDebito(1500, "D8002", calendar.getTime(), 1000, "Jorge Martínez"));
 		cuentas.put(1004, new CuentaCredito(0, "C7002", calendarCorte.getTime(),	calendar.getTime(), 0.35f, 4500.00, "Mónica Hernández"));
 		
+		TarjetaRegalo tarjetaRegalo = new TarjetaRegalo(1005, 5000, "Job Hernandez");
+		
 		System.out.println(cuentas.get(1001));
 		System.out.println(cuentas.get(1002));
 		System.out.println(cuentas.get(1003));
 		System.out.println(cuentas.get(1004));
+		
+		System.out.println(tarjetaRegalo);
 		
 		cuentas.get(1001).deposito(300);
 		cuentas.get(1002).retiro(1000);
@@ -33,6 +38,8 @@ public class SimulaBanco {
 	    ReciboSaldo.Imprimir(cuentas.get(1002));
 	    ReciboSaldo.Imprimir(cuentas.get(1003));
 	    ReciboSaldo.Imprimir(cuentas.get(1004));
+	    
+	    ReciboSaldo.Imprimir(tarjetaRegalo);
 		
 	}//main
 }//class Banco
